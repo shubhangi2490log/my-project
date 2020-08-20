@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Marksheet</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+	<div class="header">
+		<div class="school_name">
+			<h1>MGM School</h1>
+		</div>
+		
+	</div>
+	<div class="Board">
+			<h1>CBSE BOARD</h1>
+		</div>
+	<div class="mark_sheet">
+			<h3>marksheet of 12th-2020</h3>
+		</div>
+
+		<div class="mark_form">
+		<h1>Marksheet</h1>
+	</div>
+
+	<table cellpadding="0">
+		<tr>
+			<th>Student Name</th>
+			
+			<th>Roll No</th>
+			<th>Subject</th>
+			<th>Max Marks</th>
+			<th>Total Marks</th>
+			<th>Percantage</th>
+			<th>Grade</th>
+		</tr>
+		<tr>
+			<td><span class="sp" id="stn"></span></td>
+			<td><span class="sp" id="ron"></span></td>
+			<td><span class="sp" id="sub"></span></td>
+			<td><span class="sp" id="mam"></span></td>
+			<td><span class="sp" id="obma"></span></td>
+			<td><span class="sp" id="per"></span></td>
+			<td><span class="sp" id="grade"></span></td>
+			</tr>
+	</table>
+	
+
+	<script type="text/javascript">
+		window.addEventListener('load',() => {
+			const name =localStorage.getItem("studentname");
+			const subject =localStorage.getItem("subject");
+			const rolln = localStorage.getItem("rollnumber");
+			var maxm =localStorage.getItem("maxmarks");
+			const obmr =localStorage.getItem("Obtainmark");
+		
+		document.getElementById("stn").innerHTML = name;
+		document.getElementById("sub").innerHTML = subject;
+		document.getElementById("ron").innerHTML =rolln;
+		document.getElementById("mam").innerHTML = maxm;
+		document.getElementById("obma").innerHTML = obmr;
+ })
+
+
+	</script>
+
+
+</body>
+</html>

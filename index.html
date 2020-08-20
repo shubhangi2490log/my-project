@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MGM marksheet</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="mark.js"></script>
+	
+</head>
+<body>
+	<div class="header">
+		<div class="school_name">
+			<h1>MGM School</h1>
+		</div>
+	</div>
+	<div class="Board">
+			<h1>CBSE BOARD</h1>
+		</div>
+		<div class="mark_sheet">
+			<h3>marksheet of 12th-2020</h3>
+		</div>
+	<div class="mark_form">
+		<h1>Marksheet</h1>
+	</div>
+	<div class="main_form">
+		<form  method="post"  name="myform" action="index2.html" onsubmit="return check()">
+			
+				
+				<label class="lab">Student Name :</label>
+				<input type="text" name="name" id="sname" placeholder="enter student name"><span  id="txt1"></span><br><br>
+				
+				<label class="lab">Roll Number : </label>
+				<input type="text" name="ron" id="rol" placeholder="enter your rollnumber"><span id="txt2"></span><br><br>
+				
+				<label class="lab">Subject : </label>
+				<input type="text" name="sub" id="subject" placeholder="enter subject name"><span id="txt3"></span><br><br>
+				
+				<lable class="lab">out of number</lable>
+				<select name="number" id="no">
+					<option>50</option>
+					<option>100</option>
+				</select><br><br>
+				
+				
+
+
+				<label class="lab">Obtained Marks:</label>
+				<input type="text" name="marks" id="omar" placeholder="enter your marks" ><span id="txt4"></span><br><br>
+				
+
+
+				
+				<button type="submit" class="btn" onclick="passvalue();">submit</button>
+
+				
+				
+			
+		</form>
+		<!--<button type="remove" class="btn1" onclick="disableButton(this);">remove</button>-->
+	</div>
+
+	<script type="text/javascript">
+
+		function passvalue()
+		{
+			const stuname = document.getElementById("sname").value;
+			const rollnum = document.getElementById("rol").value
+			const subj = document.getElementById("subject").value;
+			const max= document.getElementById("no").value;
+			const obm =document.getElementById("omar").value;
+			 
+			localStorage.setItem("studentname",stuname);
+			localStorage.setItem("subject",subj);
+			localStorage.setItem("rollnumber",rollnum);
+			
+			localStorage.setItem("Obtainmark",obm);
+			return false;
+			localStorage.setItem("maxmarks",max);
+			return;
+		}
+
+		
+		</script>
+	
+ 
+	
+
+</body>
+</html>
